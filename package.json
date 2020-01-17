@@ -1,0 +1,24 @@
+{
+  "name": "finance-math",
+  "version": "1.0.0",
+  "description": "Financial Math for JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ticklepoke/finance-math.git"
+  },
+  "keywords": [
+    "finance",
+    "math",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ticklepoke/finance-math/issues"
+  },
+  "homepage": "https://github.com/ticklepoke/finance-math#readme"
+}
