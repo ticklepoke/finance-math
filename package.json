@@ -8,6 +8,17 @@
     "lint": "eslint '**/*.js'",
     "lint:fix": "prettier-eslint \"$(pwd)/**/*.js\" --write"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "git add"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ticklepoke/finance-math.git"
@@ -30,6 +41,8 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.0.10",
+    "lint-staged": "^9.5.0",
     "prettier-eslint": "^9.0.1",
     "prettier-eslint-cli": "^5.0.0"
   }
