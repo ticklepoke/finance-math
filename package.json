@@ -2,11 +2,17 @@
   "name": "finance-math",
   "version": "1.0.0",
   "description": "Financial Math for JS",
-  "main": "index.js",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "sideEffects": false,
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "build": "rollup -c",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:staged": "jest --findRelatedTests",
     "lint": "eslint '**/*.js'",
     "lint:fix": "prettier-eslint \"$(pwd)/**/*.js\" --write"
   },
@@ -18,6 +24,7 @@
   "lint-staged": {
     "*.js": [
       "npm run lint:fix",
+      "npm run test:staged",
       "git add"
     ]
   },
@@ -39,13 +46,16 @@
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
+    "babel-jest": "^24.9.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jest": "^23.6.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.0.10",
+    "jest": "^24.9.0",
     "lint-staged": "^9.5.0",
     "prettier-eslint": "^9.0.1",
     "prettier-eslint-cli": "^5.0.0",
@@ -53,6 +63,7 @@
     "rollup": "^1.29.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-string": "^3.0.0",
     "rollup-plugin-terser": "^5.2.0"
   }
 }

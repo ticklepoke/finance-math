@@ -1,5 +1,1 @@
-function HelloWorld (msg) {
-  console.log(msg)
-}
-
-module.exports = HelloWorld
+export * from './TimeValue'
