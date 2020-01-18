@@ -12,6 +12,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "test:coveralls": "jest --coverage --coverageReports=text-lcov | coveralls",
     "test:staged": "jest --findRelatedTests",
     "lint": "eslint '**/*.js'",
     "lint:fix": "prettier-eslint \"$(pwd)/**/*.js\" --write"
@@ -47,6 +48,7 @@
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "babel-jest": "^24.9.0",
+    "coveralls": "^3.0.9",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.20.0",
