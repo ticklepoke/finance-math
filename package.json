@@ -5,6 +5,9 @@
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
   "sideEffects": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
@@ -15,7 +18,8 @@
     "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "test:staged": "jest --findRelatedTests",
     "lint": "eslint '**/*.js'",
-    "lint:fix": "prettier-eslint \"$(pwd)/**/*.js\" --write"
+    "lint:fix": "prettier-eslint \"$(pwd)/**/*.js\" --write",
+    "prepublishOnly": "npm run build"
   },
   "husky": {
     "hooks": {
