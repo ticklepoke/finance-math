@@ -12,7 +12,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:coveralls": "jest --coverage --coverageReports=text-lcov | coveralls",
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "test:staged": "jest --findRelatedTests",
     "lint": "eslint '**/*.js'",
     "lint:fix": "prettier-eslint \"$(pwd)/**/*.js\" --write"
