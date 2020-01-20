@@ -1,4 +1,4 @@
-export function PV(
+export function PV (
   rate: number,
   nper: number,
   pmt: number,
@@ -26,7 +26,7 @@ export function PV(
   return pv_value
 }
 
-export function FV(
+export function FV (
   rate: number,
   nper: number,
   pmt: number,
@@ -47,7 +47,7 @@ export function FV(
   return parseDecimalPlaces(fv, 2)
 }
 
-function parseDecimalPlaces(num: number, decPlaces: number): number {
+function parseDecimalPlaces (num: number, decPlaces: number): number {
   // let str = '' + Math.round(num * Math.pow(10, decPlaces))
   // while (str.length <= decPlaces) {
   //   str = '0' + str
@@ -60,7 +60,7 @@ function parseDecimalPlaces(num: number, decPlaces: number): number {
   return num
 }
 
-function parseRate(rate: number): number {
+function parseRate (rate: number): number {
   // rate = parseFloat(rate)
   if (rate > 1) return rate / 100
   else return rate

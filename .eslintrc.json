@@ -17,7 +17,6 @@
   "plugins": ["@typescript-eslint"],
   "rules": {
     "camelcase": "off",
-    "no-unused-vars": "off",
-    "space-before-function-paren": "off"
+    "no-unused-vars": "off"
   }
 }
