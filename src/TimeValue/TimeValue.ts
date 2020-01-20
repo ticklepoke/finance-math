@@ -3,7 +3,7 @@ export function PV (
   nper: number,
   pmt: number,
   fv: number = 0,
-  type: boolean
+  type: number = 0
 ): number {
   rate = parseRate(rate)
 
@@ -26,6 +26,27 @@ export function PV (
   return pv_value
 }
 
+export function FV (
+  rate: number,
+  nper: number,
+  pmt: number,
+  pv: number = 0,
+  type: number = 0
+) {
+  rate = parseRate(rate)
+
+  let fv
+
+  const pow = Math.pow(1 + rate, nper)
+
+  if (rate) {
+    fv = -((pmt * (1 + rate * type) * (1 - pow)) / rate - pv * pow)
+  } else {
+    fv = 1 * (pv + pmt * nper)
+  }
+  return parseDecimalPlaces(fv, 2)
+}
+
 function parseDecimalPlaces (num: number, decPlaces: number): number {
   // let str = '' + Math.round(num * Math.pow(10, decPlaces))
   // while (str.length <= decPlaces) {
@@ -46,5 +67,6 @@ function parseRate (rate: number): number {
 }
 
 // module.exports = {
-//   PV
+//   PV,
+//   FV
 // }
