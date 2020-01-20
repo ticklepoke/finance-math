@@ -35,6 +35,15 @@ export function PV (
   return pv_value
 }
 
+/**
+ * Computes the future value of cash flows
+ * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
+ * @param nper number of periods
+ * @param pmt payments per period
+ * @param fv (optional) future value
+ * @param type (optional) start of period: 0, end of period: 1
+ * @returns future value
+ */
 export function FV (
   rate: number,
   nper: number,
