@@ -7,11 +7,15 @@ Financial Math for JS
 # Quick Start
 Install the package with `npm`
 
-```npm i finance-math```
+```sh
+npm i finance-math
+```
 
 Import functions into your project
 
-``` const { PV, FV } = require('finance-math)```
+```javascript
+const { PV, FV } = require('finance-math')
+```
 
 # Usage
 
