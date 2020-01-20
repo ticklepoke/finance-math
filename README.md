@@ -18,6 +18,6 @@ const { PV, FV } = require('finance-math')
 ```
 
 # Usage
-Function documentation can be found [here](https://ticklepoke.github.io/finance-math/globals.html)
+Function documentation can be found [here](https://ticklepoke.github.io/finance-math/index.html)
 
 

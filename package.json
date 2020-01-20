@@ -65,7 +65,7 @@
   "bugs": {
     "url": "https://github.com/ticklepoke/finance-math/issues"
   },
-  "homepage": "https://ticklepoke.github.io/finance-math/globals.html",
+  "homepage": "https://ticklepoke.github.io/finance-math/index.html",
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
