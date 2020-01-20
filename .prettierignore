@@ -3,3 +3,11 @@ node_modules
 dist
 
 coverage
+
+build
+
+*.html
+
+*.md
+
+tsconfig.json
