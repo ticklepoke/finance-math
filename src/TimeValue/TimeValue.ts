@@ -44,6 +44,7 @@ export function FV (
   } else {
     fv = 1 * (pv + pmt * nper)
   }
+
   return parseDecimalPlaces(fv, 2)
 }
 
