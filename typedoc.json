@@ -2,6 +2,6 @@
   "inputFiles": ["./src/**"],
   "exclude": "**/*.test.ts",
   "readme": "none",
-  "mode": "modules",
+  "mode": "file",
   "out": "docs"
 }
