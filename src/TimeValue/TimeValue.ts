@@ -1,3 +1,12 @@
+/**
+ * Computes the present value of cash flows
+ * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
+ * @param nper number of periods
+ * @param pmt payments per period
+ * @param fv (optional) future value
+ * @param type (optional) start of period: 0, end of period: 1
+ * @returns present value
+ */
 export function PV (
   rate: number,
   nper: number,
@@ -47,6 +56,11 @@ export function FV (
   return parseDecimalPlaces(fv, 2)
 }
 
+/**
+ * @ignore
+ * @param num
+ * @param decPlaces
+ */
 function parseDecimalPlaces (num: number, decPlaces: number): number {
   // let str = '' + Math.round(num * Math.pow(10, decPlaces))
   // while (str.length <= decPlaces) {
@@ -59,6 +73,11 @@ function parseDecimalPlaces (num: number, decPlaces: number): number {
   num = Math.round(num * Math.pow(10, decPlaces)) / Math.pow(10, decPlaces)
   return num
 }
+
+/**
+ * @ignore
+ * @param rate
+ */
 
 function parseRate (rate: number): number {
   // rate = parseFloat(rate)
