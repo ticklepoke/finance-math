@@ -15,5 +15,9 @@
     "ecmaVersion": 2018
   },
   "plugins": ["@typescript-eslint"],
-  "rules": { "camelcase": "off", "no-unused-vars": "off" }
+  "rules": {
+    "camelcase": "off",
+    "no-unused-vars": "off",
+    "space-before-function-paren": "off"
+  }
 }
