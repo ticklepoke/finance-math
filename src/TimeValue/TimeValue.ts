@@ -1,7 +1,7 @@
 /**
  * Computes the present value of a single cash flow
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
- * @param cashflow value of single cashdflow
+ * @param cashflow value of single cashflow
  * @param nper number of periods
  * @returns present value
  */
@@ -110,6 +110,81 @@ export function PVGrowingPerpetuity (
   }
 
   pv_value = cashflow / (rate - growth)
+
+  return parseDecimalPlaces(pv_value, 2)
+}
+
+/**
+ * Computes the Present Value of a series of annuities
+ * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
+ * @param annuityPayment cashflows due to annuity per period
+ * @param nper number of periods or annuity payments
+ */
+export function PVAnnuity (
+  rate: number,
+  annuityPayment: number,
+  nper: number
+): number {
+  rate = parseRate(rate)
+  let pv_value: number = 0
+
+  if (rate === 0) {
+    return 0
+  }
+
+  pv_value = (annuityPayment / rate) * (1 - Math.pow(1 + rate, -nper))
+
+  return parseDecimalPlaces(pv_value, 2)
+}
+
+/**
+ * Computes the Future Value of a series of annuities
+ * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
+ * @param annuityPayment cashflows due to annuity per period
+ * @param nper number of periods or annuity payments
+ */
+export function FVAnnuity (
+  rate: number,
+  annuityPayment: number,
+  nper: number
+): number {
+  rate = parseRate(rate)
+
+  if (rate === 0) {
+    return 0
+  }
+
+  let fv_value: number = 0
+
+  fv_value = (annuityPayment / rate) * (Math.pow(1 + rate, nper) - 1)
+
+  return fv_value
+}
+
+/**
+ * Computes the present value of a series of annuities with growth rate and discount rate. Returns 0 if growth rate exceeds interest rate.
+ * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
+ * @param cashflow cashflow per period
+ * @param growth growth rate in decimals (i.e. 1% will be entered as 0.01)
+ * @param nper number of periods of annuity
+ */
+export function PVGrowingAnnuity (
+  rate: number,
+  cashflow: number,
+  growth: number,
+  nper: number
+): number {
+  rate = parseRate(rate)
+
+  if (rate <= growth) {
+    return 0
+  }
+
+  let pv_value: number = 0
+
+  pv_value =
+    (cashflow / (rate - growth)) *
+    (1 - Math.pow((1 + growth) / (1 + rate), nper))
 
   return parseDecimalPlaces(pv_value, 2)
 }
