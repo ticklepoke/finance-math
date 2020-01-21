@@ -14,7 +14,7 @@ npm i finance-math
 Import functions into your project
 
 ```javascript
-const { PV, FV } = require('finance-math')
+const { PVSingleCashFlow } = require('finance-math')
 ```
 
 # Usage
