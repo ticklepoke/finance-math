@@ -5,7 +5,10 @@ import {
   PVMultiCashFlow,
   FVMultiCashFlow,
   PVGrowingPerpetuity,
-  PVPerpetuity
+  PVPerpetuity,
+  PVAnnuity,
+  PVGrowingAnnuity,
+  FVAnnuity
 } from './index'
 
 it('PV should return 0.5', () => {
@@ -42,4 +45,16 @@ it('PV Growing perp test', () => {
 
 it('PV perpetuity', () => {
   expect(PVPerpetuity(0.1, 1)).toEqual(10)
+})
+
+it('PV Annuity', () => {
+  expect(PVAnnuity(1, 1, 1)).toEqual(0.5)
+})
+
+it('PV growing annuity', () => {
+  expect(PVGrowingAnnuity(1, 1, 0.5, 1)).toEqual(0.5)
+})
+
+it('FV annuity', () => {
+  expect(FVAnnuity(1, 1, 1)).toEqual(1)
 })
