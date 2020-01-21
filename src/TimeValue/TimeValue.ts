@@ -73,6 +73,24 @@ export function FVMultiCashFlow (rate: number, cashflow: number[]): number {
 }
 
 /**
+ * Computes the present value of a series of perptuities with constant growth rate
+ * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
+ * @param cashflow cashflow per period
+ */
+export function PVPerpetuity (rate: number, cashflow: number): number {
+  let pv_value: number = 0
+
+  rate = parseRate(rate)
+  if (rate === 0) {
+    return 0
+  }
+
+  pv_value = cashflow / rate
+
+  return parseDecimalPlaces(pv_value, 2)
+}
+
+/**
  * Computes the present value of a series of perpetuities with growth rate and discount rate. Returns 0 if growth rate exceeds interest rate.
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
  * @param cashflow cashflow per period
