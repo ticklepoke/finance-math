@@ -6,15 +6,22 @@ typedoc.search.data = {
     {
       id: 0,
       kind: 64,
-      name: 'PV',
-      url: 'index.html#pv',
+      name: 'PVSingleCashFlow',
+      url: 'index.html#pvsinglecashflow',
       classes: 'tsd-kind-function'
     },
     {
       id: 1,
       kind: 64,
-      name: 'FV',
-      url: 'index.html#fv',
+      name: 'FVSingleCashFlow',
+      url: 'index.html#fvsinglecashflow',
+      classes: 'tsd-kind-function'
+    },
+    {
+      id: 2,
+      kind: 64,
+      name: 'PVMultiCashFlow',
+      url: 'index.html#pvmulticashflow',
       classes: 'tsd-kind-function'
     }
   ]

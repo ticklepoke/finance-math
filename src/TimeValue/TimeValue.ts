@@ -1,68 +1,75 @@
 /**
- * Computes the present value of cash flows
+ * Computes the present value of a single cash flow
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
+ * @param cashflow value of single cashdflow
  * @param nper number of periods
- * @param pmt payments per period
- * @param fv (optional) future value
- * @param type (optional) start of period: 0, end of period: 1
  * @returns present value
  */
-export function PV (
+export function PVSingleCashFlow (
   rate: number,
-  nper: number,
-  pmt: number,
-  fv: number = 0,
-  type: number = 0
+  cashflow: number,
+  nper: number
 ): number {
   rate = parseRate(rate)
 
-  let pv_value
+  let pv_value: number = 0
 
-  if (nper === 0) {
-    pv_value = 0
-  }
-
-  if (rate === 0) {
-    pv_value = fv + pmt * nper
-  } else {
-    const x = Math.pow(1 + rate, -nper)
-    const y = Math.pow(1 + rate, nper)
-    pv_value = (x * (fv * rate - pmt + y * pmt)) / rate
-  }
+  pv_value = cashflow / Math.pow(1 + rate, nper)
 
   pv_value = parseDecimalPlaces(pv_value, 2)
-
   return pv_value
 }
 
 /**
- * Computes the future value of cash flows
+ * Computes the future value of a single cash flow
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
+ * @param cashflow value of single cashflow
  * @param nper number of periods
- * @param pmt payments per period
- * @param fv (optional) future value
- * @param type (optional) start of period: 0, end of period: 1
  * @returns future value
  */
-export function FV (
+export function FVSingleCashFlow (
   rate: number,
-  nper: number,
-  pmt: number,
-  pv: number = 0,
-  type: number = 0
-) {
+  cashflow: number,
+  nper: number
+): number {
+  rate = parseRate(rate)
+  let fv_value: number = 0
+  fv_value = cashflow * Math.pow(1 + rate, nper)
+
+  fv_value = parseDecimalPlaces(fv_value, 2)
+  return fv_value
+}
+
+/**
+ * Computes the Present Value of an array of n cashflows in chronological order on 0th period
+ * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
+ * @param cashflow array of cashflows in chronological order (ie: [1,2,3] symbolizes 1 in the first period, 2 in the second period and 3 in 3rd period)
+ */
+export function PVMultiCashFlow (rate: number, cashflow: number[]): number {
   rate = parseRate(rate)
 
-  let fv
+  let pv_value: number = 0
+  cashflow.forEach((item, index) => {
+    pv_value += item / Math.pow(1 + rate, index + 1)
+  })
 
-  const pow = Math.pow(1 + rate, nper)
+  return parseDecimalPlaces(pv_value, 2)
+}
 
-  if (rate) {
-    fv = -((pmt * (1 + rate * type) * (1 - pow)) / rate - pv * pow)
-  } else {
-    fv = 1 * (pv + pmt * nper)
-  }
-  return parseDecimalPlaces(fv, 2)
+/**
+ * Computes the Future Value of an array of n-1 cashflows in chronological order on nth period
+ * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
+ * @param cashflow array of cashflows in chronological order (ie: [1,2,3] symbolizes 1 in the first period, 2 in the second period and 3 in 3rd period)
+ */
+export function FVMultiCashFlow (rate: number, cashflow: number[]): number {
+  rate = parseRate(rate)
+
+  let fv_value: number = 0
+  cashflow.forEach((item, index) => {
+    fv_value += item * Math.pow(1 + rate, cashflow.length - index)
+  })
+
+  return parseDecimalPlaces(fv_value, 2)
 }
 
 /**
