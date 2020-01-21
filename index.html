@@ -72,6 +72,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="index.html#fvmulticashflow" class="tsd-kind-icon">FVMulti<wbr>Cash<wbr>Flow</a></li>
 								<li class="tsd-kind-function"><a href="index.html#fvsinglecashflow" class="tsd-kind-icon">FVSingle<wbr>Cash<wbr>Flow</a></li>
+								<li class="tsd-kind-function"><a href="index.html#pvgrowingperpetuity" class="tsd-kind-icon">PVGrowing<wbr>Perpetuity</a></li>
 								<li class="tsd-kind-function"><a href="index.html#pvmulticashflow" class="tsd-kind-icon">PVMulti<wbr>Cash<wbr>Flow</a></li>
 								<li class="tsd-kind-function"><a href="index.html#pvsinglecashflow" class="tsd-kind-icon">PVSingle<wbr>Cash<wbr>Flow</a></li>
 							</ul>
@@ -91,7 +92,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d6b9ee5/src/TimeValue/TimeValue.ts#L64">TimeValue/TimeValue.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/309e1d5/src/TimeValue/TimeValue.ts#L64">TimeValue/TimeValue.ts:64</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -128,7 +129,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d6b9ee5/src/TimeValue/TimeValue.ts#L30">TimeValue/TimeValue.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/309e1d5/src/TimeValue/TimeValue.ts#L30">TimeValue/TimeValue.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -163,6 +164,49 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="pvgrowingperpetuity" class="tsd-anchor"></a>
+					<h3>PVGrowing<wbr>Perpetuity</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">PVGrowing<wbr>Perpetuity<span class="tsd-signature-symbol">(</span>rate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, cashflow<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, growth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/309e1d5/src/TimeValue/TimeValue.ts#L81">TimeValue/TimeValue.ts:81</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes the present value of a series of perpetuities with growth rate and discount rate. Returns 0 if growth rate exceeds interest rate.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>rate: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>interest rate in decimals (i.e. 1% will be entered as 0.01)</p>
+									</div>
+								</li>
+								<li>
+									<h5>cashflow: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>cashflow per period</p>
+									</div>
+								</li>
+								<li>
+									<h5>growth: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>growth rate in decimals (i.e. 1% will be entered as 0.01)</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="pvmulticashflow" class="tsd-anchor"></a>
 					<h3>PVMulti<wbr>Cash<wbr>Flow</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -172,7 +216,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d6b9ee5/src/TimeValue/TimeValue.ts#L48">TimeValue/TimeValue.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/309e1d5/src/TimeValue/TimeValue.ts#L48">TimeValue/TimeValue.ts:48</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -209,7 +253,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d6b9ee5/src/TimeValue/TimeValue.ts#L8">TimeValue/TimeValue.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/309e1d5/src/TimeValue/TimeValue.ts#L8">TimeValue/TimeValue.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -260,6 +304,9 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="index.html#fvsinglecashflow" class="tsd-kind-icon">FVSingle<wbr>Cash<wbr>Flow</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#pvgrowingperpetuity" class="tsd-kind-icon">PVGrowing<wbr>Perpetuity</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="index.html#pvmulticashflow" class="tsd-kind-icon">PVMulti<wbr>Cash<wbr>Flow</a>
