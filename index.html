@@ -70,8 +70,8 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function"><a href="index.html#fv" class="tsd-kind-icon">FV</a></li>
-								<li class="tsd-kind-function"><a href="index.html#pv" class="tsd-kind-icon">PV</a></li>
+								<li class="tsd-kind-function"><a href="index.html#fvsinglecashflow" class="tsd-kind-icon">FVSingle<wbr>Cash<wbr>Flow</a></li>
+								<li class="tsd-kind-function"><a href="index.html#pvsinglecashflow" class="tsd-kind-icon">PVSingle<wbr>Cash<wbr>Flow</a></li>
 							</ul>
 						</section>
 					</div>
@@ -80,21 +80,21 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function">
-					<a name="fv" class="tsd-anchor"></a>
-					<h3>FV</h3>
+					<a name="fvsinglecashflow" class="tsd-anchor"></a>
+					<h3>FVSingle<wbr>Cash<wbr>Flow</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">FV<span class="tsd-signature-symbol">(</span>rate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, nper<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, pmt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, pv<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">FVSingle<wbr>Cash<wbr>Flow<span class="tsd-signature-symbol">(</span>rate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, cashflow<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, nper<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/8e4b5b3/src/TimeValue/TimeValue.ts#L47">TimeValue/TimeValue.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/8c323dd/src/TimeValue/TimeValue.ts#L30">TimeValue/TimeValue.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Computes the future value of cash flows</p>
+									<p>Computes the future value of a single cash flow</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -106,24 +106,15 @@
 									</div>
 								</li>
 								<li>
+									<h5>cashflow: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>value of single cashflow</p>
+									</div>
+								</li>
+								<li>
 									<h5>nper: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>number of periods</p>
-									</div>
-								</li>
-								<li>
-									<h5>pmt: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>payments per period</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> pv: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> type: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>(optional) start of period: 0, end of period: 1</p>
 									</div>
 								</li>
 							</ul>
@@ -133,21 +124,21 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
-					<a name="pv" class="tsd-anchor"></a>
-					<h3>PV</h3>
+					<a name="pvsinglecashflow" class="tsd-anchor"></a>
+					<h3>PVSingle<wbr>Cash<wbr>Flow</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">PV<span class="tsd-signature-symbol">(</span>rate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, nper<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, pmt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, fv<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">PVSingle<wbr>Cash<wbr>Flow<span class="tsd-signature-symbol">(</span>rate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, cashflow<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, nper<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/8e4b5b3/src/TimeValue/TimeValue.ts#L10">TimeValue/TimeValue.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/8c323dd/src/TimeValue/TimeValue.ts#L8">TimeValue/TimeValue.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Computes the present value of cash flows</p>
+									<p>Computes the present value of a single cash flow</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -159,27 +150,15 @@
 									</div>
 								</li>
 								<li>
+									<h5>cashflow: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>value of single cashdflow</p>
+									</div>
+								</li>
+								<li>
 									<h5>nper: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>number of periods</p>
-									</div>
-								</li>
-								<li>
-									<h5>pmt: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>payments per period</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> fv: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>(optional) future value</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> type: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>(optional) start of period: 0, end of period: 1</p>
 									</div>
 								</li>
 							</ul>
@@ -201,10 +180,10 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function">
-						<a href="index.html#fv" class="tsd-kind-icon">FV</a>
+						<a href="index.html#fvsinglecashflow" class="tsd-kind-icon">FVSingle<wbr>Cash<wbr>Flow</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="index.html#pv" class="tsd-kind-icon">PV</a>
+						<a href="index.html#pvsinglecashflow" class="tsd-kind-icon">PVSingle<wbr>Cash<wbr>Flow</a>
 					</li>
 				</ul>
 			</nav>
