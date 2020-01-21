@@ -70,8 +70,11 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="index.html#fvannuity" class="tsd-kind-icon">FVAnnuity</a></li>
 								<li class="tsd-kind-function"><a href="index.html#fvmulticashflow" class="tsd-kind-icon">FVMulti<wbr>Cash<wbr>Flow</a></li>
 								<li class="tsd-kind-function"><a href="index.html#fvsinglecashflow" class="tsd-kind-icon">FVSingle<wbr>Cash<wbr>Flow</a></li>
+								<li class="tsd-kind-function"><a href="index.html#pvannuity" class="tsd-kind-icon">PVAnnuity</a></li>
+								<li class="tsd-kind-function"><a href="index.html#pvgrowingannuity" class="tsd-kind-icon">PVGrowing<wbr>Annuity</a></li>
 								<li class="tsd-kind-function"><a href="index.html#pvgrowingperpetuity" class="tsd-kind-icon">PVGrowing<wbr>Perpetuity</a></li>
 								<li class="tsd-kind-function"><a href="index.html#pvmulticashflow" class="tsd-kind-icon">PVMulti<wbr>Cash<wbr>Flow</a></li>
 								<li class="tsd-kind-function"><a href="index.html#pvperpetuity" class="tsd-kind-icon">PVPerpetuity</a></li>
@@ -84,6 +87,49 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="fvannuity" class="tsd-anchor"></a>
+					<h3>FVAnnuity</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">FVAnnuity<span class="tsd-signature-symbol">(</span>rate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, annuityPayment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, nper<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/536181d/src/TimeValue/TimeValue.ts#L146">TimeValue/TimeValue.ts:146</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes the Future Value of a series of annuities</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>rate: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>interest rate in decimals (i.e. 1% will be entered as 0.01)</p>
+									</div>
+								</li>
+								<li>
+									<h5>annuityPayment: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>cashflows due to annuity per period</p>
+									</div>
+								</li>
+								<li>
+									<h5>nper: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>number of periods or annuity payments</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="fvmulticashflow" class="tsd-anchor"></a>
 					<h3>FVMulti<wbr>Cash<wbr>Flow</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -93,7 +139,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d459594/src/TimeValue/TimeValue.ts#L64">TimeValue/TimeValue.ts:64</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/536181d/src/TimeValue/TimeValue.ts#L64">TimeValue/TimeValue.ts:64</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -130,7 +176,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d459594/src/TimeValue/TimeValue.ts#L30">TimeValue/TimeValue.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/536181d/src/TimeValue/TimeValue.ts#L30">TimeValue/TimeValue.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -165,6 +211,98 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="pvannuity" class="tsd-anchor"></a>
+					<h3>PVAnnuity</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">PVAnnuity<span class="tsd-signature-symbol">(</span>rate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, annuityPayment<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, nper<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/536181d/src/TimeValue/TimeValue.ts#L123">TimeValue/TimeValue.ts:123</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes the Present Value of a series of annuities</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>rate: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>interest rate in decimals (i.e. 1% will be entered as 0.01)</p>
+									</div>
+								</li>
+								<li>
+									<h5>annuityPayment: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>cashflows due to annuity per period</p>
+									</div>
+								</li>
+								<li>
+									<h5>nper: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>number of periods or annuity payments</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="pvgrowingannuity" class="tsd-anchor"></a>
+					<h3>PVGrowing<wbr>Annuity</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">PVGrowing<wbr>Annuity<span class="tsd-signature-symbol">(</span>rate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, cashflow<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, growth<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, nper<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/536181d/src/TimeValue/TimeValue.ts#L171">TimeValue/TimeValue.ts:171</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes the present value of a series of annuities with growth rate and discount rate. Returns 0 if growth rate exceeds interest rate.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>rate: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>interest rate in decimals (i.e. 1% will be entered as 0.01)</p>
+									</div>
+								</li>
+								<li>
+									<h5>cashflow: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>cashflow per period</p>
+									</div>
+								</li>
+								<li>
+									<h5>growth: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>growth rate in decimals (i.e. 1% will be entered as 0.01)</p>
+									</div>
+								</li>
+								<li>
+									<h5>nper: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>number of periods of annuity</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="pvgrowingperpetuity" class="tsd-anchor"></a>
 					<h3>PVGrowing<wbr>Perpetuity</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -174,7 +312,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d459594/src/TimeValue/TimeValue.ts#L99">TimeValue/TimeValue.ts:99</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/536181d/src/TimeValue/TimeValue.ts#L99">TimeValue/TimeValue.ts:99</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -217,7 +355,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d459594/src/TimeValue/TimeValue.ts#L48">TimeValue/TimeValue.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/536181d/src/TimeValue/TimeValue.ts#L48">TimeValue/TimeValue.ts:48</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -254,7 +392,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d459594/src/TimeValue/TimeValue.ts#L80">TimeValue/TimeValue.ts:80</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/536181d/src/TimeValue/TimeValue.ts#L80">TimeValue/TimeValue.ts:80</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -291,7 +429,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d459594/src/TimeValue/TimeValue.ts#L8">TimeValue/TimeValue.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/536181d/src/TimeValue/TimeValue.ts#L8">TimeValue/TimeValue.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -310,7 +448,7 @@
 								<li>
 									<h5>cashflow: <span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>value of single cashdflow</p>
+										<p>value of single cashflow</p>
 									</div>
 								</li>
 								<li>
@@ -338,10 +476,19 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function">
+						<a href="index.html#fvannuity" class="tsd-kind-icon">FVAnnuity</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="index.html#fvmulticashflow" class="tsd-kind-icon">FVMulti<wbr>Cash<wbr>Flow</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="index.html#fvsinglecashflow" class="tsd-kind-icon">FVSingle<wbr>Cash<wbr>Flow</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#pvannuity" class="tsd-kind-icon">PVAnnuity</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#pvgrowingannuity" class="tsd-kind-icon">PVGrowing<wbr>Annuity</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="index.html#pvgrowingperpetuity" class="tsd-kind-icon">PVGrowing<wbr>Perpetuity</a>
