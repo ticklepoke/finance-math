@@ -11,3 +11,5 @@ build
 *.md
 
 tsconfig.json
+
+docs

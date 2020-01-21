@@ -70,6 +70,7 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="index.html#fvmulticashflow" class="tsd-kind-icon">FVMulti<wbr>Cash<wbr>Flow</a></li>
 								<li class="tsd-kind-function"><a href="index.html#fvsinglecashflow" class="tsd-kind-icon">FVSingle<wbr>Cash<wbr>Flow</a></li>
 								<li class="tsd-kind-function"><a href="index.html#pvmulticashflow" class="tsd-kind-icon">PVMulti<wbr>Cash<wbr>Flow</a></li>
 								<li class="tsd-kind-function"><a href="index.html#pvsinglecashflow" class="tsd-kind-icon">PVSingle<wbr>Cash<wbr>Flow</a></li>
@@ -81,6 +82,43 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="fvmulticashflow" class="tsd-anchor"></a>
+					<h3>FVMulti<wbr>Cash<wbr>Flow</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">FVMulti<wbr>Cash<wbr>Flow<span class="tsd-signature-symbol">(</span>rate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, cashflow<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d6b9ee5/src/TimeValue/TimeValue.ts#L64">TimeValue/TimeValue.ts:64</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Computes the Future Value of an array of n-1 cashflows in chronological order on nth period</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>rate: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>interest rate in decimals (i.e. 1% will be entered as 0.01)</p>
+									</div>
+								</li>
+								<li>
+									<h5>cashflow: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>array of cashflows in chronological order (ie: [1,2,3] symbolizes 1 in the first period, 2 in the second period and 3 in 3rd period)</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="fvsinglecashflow" class="tsd-anchor"></a>
 					<h3>FVSingle<wbr>Cash<wbr>Flow</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -90,7 +128,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/8c323dd/src/TimeValue/TimeValue.ts#L30">TimeValue/TimeValue.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d6b9ee5/src/TimeValue/TimeValue.ts#L30">TimeValue/TimeValue.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -134,12 +172,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/8c323dd/src/TimeValue/TimeValue.ts#L48">TimeValue/TimeValue.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d6b9ee5/src/TimeValue/TimeValue.ts#L48">TimeValue/TimeValue.ts:48</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Computes the Present Value of an array of multiple cashflows in chronological order</p>
+									<p>Computes the Present Value of an array of n cashflows in chronological order on 0th period</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -171,7 +209,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/8c323dd/src/TimeValue/TimeValue.ts#L8">TimeValue/TimeValue.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/d6b9ee5/src/TimeValue/TimeValue.ts#L8">TimeValue/TimeValue.ts:8</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -217,6 +255,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-function">
+						<a href="index.html#fvmulticashflow" class="tsd-kind-icon">FVMulti<wbr>Cash<wbr>Flow</a>
+					</li>
 					<li class=" tsd-kind-function">
 						<a href="index.html#fvsinglecashflow" class="tsd-kind-icon">FVSingle<wbr>Cash<wbr>Flow</a>
 					</li>
