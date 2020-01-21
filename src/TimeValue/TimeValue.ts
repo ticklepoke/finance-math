@@ -72,6 +72,24 @@ export function FVMultiCashFlow (rate: number, cashflow: number[]): number {
   return parseDecimalPlaces(fv_value, 2)
 }
 
+export function PVGrowingPerpetuity (
+  rate: number,
+  cashflow: number,
+  growth: number
+): number {
+  rate = parseRate(rate)
+
+  let pv_value = 0
+
+  if (rate <= growth) {
+    return 0
+  }
+
+  pv_value = cashflow / (rate - growth)
+
+  return parseDecimalPlaces(pv_value, 2)
+}
+
 /**
  * @ignore
  * @param num
