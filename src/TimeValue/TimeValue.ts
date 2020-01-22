@@ -6,6 +6,7 @@ import { parseDecimalPlaces, parseRate } from '../utils'
  * @param cashflow value of single cashflow
  * @param nper number of periods
  * @returns Present value
+ * @category PV
  */
 export function PVSingleCashFlow (
   rate: number,
@@ -28,6 +29,7 @@ export function PVSingleCashFlow (
  * @param cashflow value of single cashflow
  * @param nper number of periods
  * @returns Future value
+ * @category FV
  */
 export function FVSingleCashFlow (
   rate: number,
@@ -47,6 +49,7 @@ export function FVSingleCashFlow (
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
  * @param cashflow array of cashflows in chronological order (ie: [1,2,3] symbolizes 1 in the first period, 2 in the second period and 3 in 3rd period)
  * @returns Present value
+ * @category PV
  */
 export function PVMultiCashFlow (rate: number, cashflow: number[]): number {
   rate = parseRate(rate)
@@ -64,6 +67,7 @@ export function PVMultiCashFlow (rate: number, cashflow: number[]): number {
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
  * @param cashflow array of cashflows in chronological order (ie: [1,2,3] symbolizes 1 in the first period, 2 in the second period and 3 in 3rd period)
  * @returns Future value
+ * @category FV
  */
 export function FVMultiCashFlow (rate: number, cashflow: number[]): number {
   rate = parseRate(rate)
@@ -81,6 +85,7 @@ export function FVMultiCashFlow (rate: number, cashflow: number[]): number {
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
  * @param cashflow cashflow per period
  * @returns Present value
+ * @category PV
  */
 export function PVPerpetuity (rate: number, cashflow: number): number {
   let pv_value: number = 0
@@ -101,6 +106,7 @@ export function PVPerpetuity (rate: number, cashflow: number): number {
  * @param cashflow cashflow per period
  * @param growth growth rate in decimals (i.e. 1% will be entered as 0.01)
  * @returns Present value
+ * @category PV
  */
 export function PVGrowingPerpetuity (
   rate: number,
@@ -126,6 +132,7 @@ export function PVGrowingPerpetuity (
  * @param annuityPayment cashflows due to annuity per period
  * @param nper number of periods or annuity payments
  * @returns Present value
+ * @category PV
  */
 export function PVAnnuity (
   rate: number,
@@ -150,6 +157,7 @@ export function PVAnnuity (
  * @param annuityPayment cashflows due to annuity per period
  * @param nper number of periods or annuity payments
  * @returns Future value
+ * @category FV
  */
 export function FVAnnuity (
   rate: number,
@@ -176,6 +184,7 @@ export function FVAnnuity (
  * @param growth growth rate in decimals (i.e. 1% will be entered as 0.01)
  * @param nper number of periods of annuity
  * @returns Present value
+ * @category PV
  */
 export function PVGrowingAnnuity (
   rate: number,

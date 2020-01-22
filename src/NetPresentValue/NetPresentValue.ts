@@ -6,6 +6,7 @@ import { parseRate, parseDecimalPlaces } from '../utils/'
  * @param initialInvestment initial investment amount of a project, entered as a positive value
  * @param cashflows array of cashflows in chronological order (ie: [1,2,3] symbolizes 1 in the first period, 2 in the second period and 3 in 3rd period)
  * @returns NPV
+ * @category NPV
  */
 export function NPV (
   rate: number,
