@@ -27,7 +27,7 @@ export function parseRate (rate: number): number {
   else return rate
 }
 
-export function seekZero (fn): number {
+export function seekZero (fn: Function): number {
   let x = 1
   while (fn(x) > 0) x++
   while (fn(x) < 0) x -= 0.01
