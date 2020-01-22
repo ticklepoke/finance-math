@@ -68,12 +68,22 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Functions</h3>
+							<h3>FV Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="index.html#fvannuity" class="tsd-kind-icon">FVAnnuity</a></li>
 								<li class="tsd-kind-function"><a href="index.html#fvmulticashflow" class="tsd-kind-icon">FVMulti<wbr>Cash<wbr>Flow</a></li>
 								<li class="tsd-kind-function"><a href="index.html#fvsinglecashflow" class="tsd-kind-icon">FVSingle<wbr>Cash<wbr>Flow</a></li>
+							</ul>
+							<h3>NPV Functions</h3>
+							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="index.html#npv" class="tsd-kind-icon">NPV</a></li>
+							</ul>
+							<h3>Other Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="index.html#irr" class="tsd-kind-icon">IRR</a></li>
+							</ul>
+							<h3>PV Functions</h3>
+							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="index.html#pvannuity" class="tsd-kind-icon">PVAnnuity</a></li>
 								<li class="tsd-kind-function"><a href="index.html#pvgrowingannuity" class="tsd-kind-icon">PVGrowing<wbr>Annuity</a></li>
 								<li class="tsd-kind-function"><a href="index.html#pvgrowingperpetuity" class="tsd-kind-icon">PVGrowing<wbr>Perpetuity</a></li>
@@ -86,7 +96,7 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
+				<h2>FV Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="fvannuity" class="tsd-anchor"></a>
 					<h3>FVAnnuity</h3>
@@ -97,7 +107,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/fe95a1d/src/TimeValue/TimeValue.ts#L154">TimeValue/TimeValue.ts:154</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/074334b/src/TimeValue/TimeValue.ts#L162">TimeValue/TimeValue.ts:162</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -141,7 +151,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/fe95a1d/src/TimeValue/TimeValue.ts#L68">TimeValue/TimeValue.ts:68</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/074334b/src/TimeValue/TimeValue.ts#L72">TimeValue/TimeValue.ts:72</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -179,7 +189,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/fe95a1d/src/TimeValue/TimeValue.ts#L32">TimeValue/TimeValue.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/074334b/src/TimeValue/TimeValue.ts#L34">TimeValue/TimeValue.ts:34</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -213,6 +223,9 @@
 						</li>
 					</ul>
 				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>NPV Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="npv" class="tsd-anchor"></a>
 					<h3>NPV</h3>
@@ -223,7 +236,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/fe95a1d/src/NetPresentValue/NetPresentValue.ts#L10">NetPresentValue/NetPresentValue.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/074334b/src/NetPresentValue/NetPresentValue.ts#L11">NetPresentValue/NetPresentValue.ts:11</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -254,6 +267,35 @@
 						</li>
 					</ul>
 				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Other Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="irr" class="tsd-anchor"></a>
+					<h3>IRR</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">IRR<span class="tsd-signature-symbol">(</span>cashflow<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in InternalRateReturn/InternalRateReturn.ts:3</li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cashflow: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>PV Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="pvannuity" class="tsd-anchor"></a>
 					<h3>PVAnnuity</h3>
@@ -264,7 +306,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/fe95a1d/src/TimeValue/TimeValue.ts#L130">TimeValue/TimeValue.ts:130</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/074334b/src/TimeValue/TimeValue.ts#L137">TimeValue/TimeValue.ts:137</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -308,7 +350,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/fe95a1d/src/TimeValue/TimeValue.ts#L180">TimeValue/TimeValue.ts:180</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/074334b/src/TimeValue/TimeValue.ts#L189">TimeValue/TimeValue.ts:189</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -358,7 +400,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/fe95a1d/src/TimeValue/TimeValue.ts#L105">TimeValue/TimeValue.ts:105</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/074334b/src/TimeValue/TimeValue.ts#L111">TimeValue/TimeValue.ts:111</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -402,7 +444,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/fe95a1d/src/TimeValue/TimeValue.ts#L51">TimeValue/TimeValue.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/074334b/src/TimeValue/TimeValue.ts#L54">TimeValue/TimeValue.ts:54</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -440,7 +482,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/fe95a1d/src/TimeValue/TimeValue.ts#L85">TimeValue/TimeValue.ts:85</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/074334b/src/TimeValue/TimeValue.ts#L90">TimeValue/TimeValue.ts:90</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -478,7 +520,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/fe95a1d/src/TimeValue/TimeValue.ts#L10">TimeValue/TimeValue.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/ticklepoke/finance-math/blob/074334b/src/TimeValue/TimeValue.ts#L11">TimeValue/TimeValue.ts:11</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -532,6 +574,9 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="index.html#fvsinglecashflow" class="tsd-kind-icon">FVSingle<wbr>Cash<wbr>Flow</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="index.html#irr" class="tsd-kind-icon">IRR</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="index.html#npv" class="tsd-kind-icon">NPV</a>
