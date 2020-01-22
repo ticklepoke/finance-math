@@ -26,3 +26,10 @@ export function parseRate (rate: number): number {
   if (rate > 1) return rate / 100
   else return rate
 }
+
+export function seekZero (fn): number {
+  let x = 1
+  while (fn(x) > 0) x++
+  while (fn(x) < 0) x -= 0.01
+  return (x += 0.01)
+}
