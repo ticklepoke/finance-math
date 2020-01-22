@@ -1,9 +1,11 @@
+import { parseDecimalPlaces, parseRate } from '../utils'
+
 /**
  * Computes the present value of a single cash flow
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
  * @param cashflow value of single cashflow
  * @param nper number of periods
- * @returns present value
+ * @returns Present value
  */
 export function PVSingleCashFlow (
   rate: number,
@@ -25,7 +27,7 @@ export function PVSingleCashFlow (
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
  * @param cashflow value of single cashflow
  * @param nper number of periods
- * @returns future value
+ * @returns Future value
  */
 export function FVSingleCashFlow (
   rate: number,
@@ -44,6 +46,7 @@ export function FVSingleCashFlow (
  * Computes the Present Value of an array of n cashflows in chronological order on 0th period
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
  * @param cashflow array of cashflows in chronological order (ie: [1,2,3] symbolizes 1 in the first period, 2 in the second period and 3 in 3rd period)
+ * @returns Present value
  */
 export function PVMultiCashFlow (rate: number, cashflow: number[]): number {
   rate = parseRate(rate)
@@ -60,6 +63,7 @@ export function PVMultiCashFlow (rate: number, cashflow: number[]): number {
  * Computes the Future Value of an array of n-1 cashflows in chronological order on nth period
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
  * @param cashflow array of cashflows in chronological order (ie: [1,2,3] symbolizes 1 in the first period, 2 in the second period and 3 in 3rd period)
+ * @returns Future value
  */
 export function FVMultiCashFlow (rate: number, cashflow: number[]): number {
   rate = parseRate(rate)
@@ -76,6 +80,7 @@ export function FVMultiCashFlow (rate: number, cashflow: number[]): number {
  * Computes the present value of a series of perptuities with constant growth rate
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
  * @param cashflow cashflow per period
+ * @returns Present value
  */
 export function PVPerpetuity (rate: number, cashflow: number): number {
   let pv_value: number = 0
@@ -95,6 +100,7 @@ export function PVPerpetuity (rate: number, cashflow: number): number {
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
  * @param cashflow cashflow per period
  * @param growth growth rate in decimals (i.e. 1% will be entered as 0.01)
+ * @returns Present value
  */
 export function PVGrowingPerpetuity (
   rate: number,
@@ -119,6 +125,7 @@ export function PVGrowingPerpetuity (
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
  * @param annuityPayment cashflows due to annuity per period
  * @param nper number of periods or annuity payments
+ * @returns Present value
  */
 export function PVAnnuity (
   rate: number,
@@ -142,6 +149,7 @@ export function PVAnnuity (
  * @param rate interest rate in decimals (i.e. 1% will be entered as 0.01)
  * @param annuityPayment cashflows due to annuity per period
  * @param nper number of periods or annuity payments
+ * @returns Future value
  */
 export function FVAnnuity (
   rate: number,
@@ -167,6 +175,7 @@ export function FVAnnuity (
  * @param cashflow cashflow per period
  * @param growth growth rate in decimals (i.e. 1% will be entered as 0.01)
  * @param nper number of periods of annuity
+ * @returns Present value
  */
 export function PVGrowingAnnuity (
   rate: number,
@@ -188,37 +197,3 @@ export function PVGrowingAnnuity (
 
   return parseDecimalPlaces(pv_value, 2)
 }
-
-/**
- * @ignore
- * @param num
- * @param decPlaces
- */
-function parseDecimalPlaces (num: number, decPlaces: number): number {
-  // let str = '' + Math.round(num * Math.pow(10, decPlaces))
-  // while (str.length <= decPlaces) {
-  //   str = '0' + str
-  // }
-
-  // const decPoint = str.length - decPlaces
-  // return str.substring(0, decPoint) + '.' + str.substring(decPoint, str.length)
-
-  num = Math.round(num * Math.pow(10, decPlaces)) / Math.pow(10, decPlaces)
-  return num
-}
-
-/**
- * @ignore
- * @param rate
- */
-
-function parseRate (rate: number): number {
-  // rate = parseFloat(rate)
-  if (rate > 1) return rate / 100
-  else return rate
-}
-
-// module.exports = {
-//   PV,
-//   FV
-// }
