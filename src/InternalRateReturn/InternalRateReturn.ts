@@ -11,6 +11,7 @@ export function IRR (cashflow: number[]): number {
 
   let positive = false
   let negative = false
+
   cashflow.forEach(item => {
     if (item < 0) negative = true
     if (item > 0) positive = true
